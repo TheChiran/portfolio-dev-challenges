@@ -2,7 +2,11 @@ import * as React from "react";
 import PersonCard from "../common/PersonCard";
 import "./../../assets/styles/style.scss";
 import { skillSet, toolsSet } from "../../data/skillset-list.js";
+import { hobbyList } from "../../data/hobbies.js";
 import SKillList from "../common/SkillList";
+import Hobbies from "../common/Hobbies";
+import Experiences from "../common/Experiences";
+import { experienceDataList } from "../../data/experience-data";
 
 const DefaultLayout: React.FC = () => {
   return (
@@ -16,8 +20,13 @@ const DefaultLayout: React.FC = () => {
             <SKillList title={skillSet.title} data={skillSet.list} />
             <SKillList title={toolsSet.title} data={toolsSet.list} />
           </div>
+          <div className="hobby-list">
+            <Hobbies title="Hobbies" data={hobbyList} />
+          </div>
         </div>
-        <div className="col-2"></div>
+        <div className="col-2">
+          <Experiences title={"Experiences"} data={experienceDataList} />
+        </div>
       </div>
       <footer>
         <p>

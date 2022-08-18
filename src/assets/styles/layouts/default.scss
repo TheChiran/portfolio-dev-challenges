@@ -8,11 +8,14 @@
         &:nth-of-type(2){
             display: grid;
             column-gap: 34px;
-            grid-template-columns: repeat(12, calc(8.33% - 34px));
+            grid-template-columns: repeat(12, calc(8.33% - 31px));
 
             .col-1{
                 width: 100%;
                 grid-column: 1 / 5;
+                display: flex;
+                flex-direction: column;
+                row-gap: 42px;
 
                 .skill-list{
                     display: flex;

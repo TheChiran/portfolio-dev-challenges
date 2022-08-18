@@ -7,6 +7,10 @@
 
         .column1{
             grid-column: 1 / 5;
+            display: flex;
+            flex-direction: column;
+            row-gap: 42px;
+
             .person_card{
                 flex-direction: column;
                 row-gap: 24px;
