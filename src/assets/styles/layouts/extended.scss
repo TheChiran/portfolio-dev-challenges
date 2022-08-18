@@ -2,7 +2,7 @@
 .extended_layout{
     .columns{
         display: grid;
-        grid-template-columns: repeat(12,calc(8.33% - 32px));
+        grid-template-columns: repeat(12, calc(8.40% - 30px));
         column-gap: 32px;
 
         .column1{
@@ -44,6 +44,30 @@
             .skill-list{
                 display: flex;
                 column-gap: 32px;
+            }
+
+            .project-list{
+                .projects{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 36px;
+
+                    .project{
+                        width: 100%;
+                        flex-direction: row;
+                        column-gap: 34px;
+
+                        &__image-wrapper{
+                            width: 322px;
+                            height: auto;
+                            padding-top: unset;
+                        }
+
+                        &__contents{
+                            width: calc(100% - 322px - 34px);
+                        }
+                    }
+                }
             }
         }
     }

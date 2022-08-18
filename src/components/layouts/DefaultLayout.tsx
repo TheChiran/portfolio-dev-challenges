@@ -9,6 +9,8 @@ import Experiences from "../common/Experiences";
 import { experienceDataList } from "../../data/experience-data";
 import BlogsList from "../common/blogs";
 import { blogs } from "../../data/blogs-data";
+import Projects from "../common/Projects";
+import { ProjectList } from "../../data/project-list";
 
 const DefaultLayout: React.FC = () => {
   return (
@@ -31,6 +33,11 @@ const DefaultLayout: React.FC = () => {
           <BlogsList title={"Blogs"} data={blogs} />
         </div>
       </div>
+      <Projects
+        title={"Projects"}
+        tags={["HTML", "React", "CSS", "SCSS", "Responsive"]}
+        data={ProjectList}
+      />
       <footer>
         <p>
           Created by <a href="https://chirantonmoy.vercel.app/">chiranSWE</a> -

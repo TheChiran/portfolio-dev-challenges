@@ -1,7 +1,5 @@
 import * as React from "react";
 import PersonCard from "../common/PersonCard";
-import ProjectList from "../common/ProjectList";
-import "./../../assets/styles/style.scss";
 import { skillSet, toolsSet } from "../../data/skillset-list.js";
 import { hobbyList } from "../../data/hobbies.js";
 import SKillList from "../common/SkillList";
@@ -10,6 +8,8 @@ import Experiences from "../common/Experiences";
 import { experienceDataList } from "../../data/experience-data";
 import BlogsList from "../common/blogs";
 import { blogs } from "../../data/blogs-data";
+import Projects from "../common/Projects";
+import { ProjectList } from "../../data/project-list";
 
 const ExtendedLayout: React.FC = () => {
   return (
@@ -27,6 +27,11 @@ const ExtendedLayout: React.FC = () => {
             <SKillList title={skillSet.title} data={skillSet.list} />
             <SKillList title={toolsSet.title} data={toolsSet.list} />
           </div>
+          <Projects
+            title={"Projects"}
+            tags={["HTML", "React", "CSS", "SCSS", "Responsive"]}
+            data={ProjectList}
+          />
           <BlogsList title={"Blogs"} data={blogs} />
         </div>
       </div>

@@ -17,7 +17,7 @@ const App: React.FC = () => {
 
   return (
     <ThemeContext.Provider value={{ layout: layout, setLayout: changeLayout }}>
-      <div className="container">
+      <div className="container mt-70">
         <Layout />
         <ThemeSetting />
       </div>

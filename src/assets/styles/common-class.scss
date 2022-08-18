@@ -10,6 +10,10 @@
     margin:  0 auto;
 }
 
+.mt-70{
+    margin-top: 70px;
+}
+
 .d-flex{
     display: flex;
 }
@@ -343,6 +347,153 @@
                     height: 100%;
                     object-fit: cover;
                     border-radius: 12px;
+                }
+            }
+        }
+    }
+}
+
+.project-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+
+    &__header{
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+
+        .title{
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 500;
+            color: var(--title-color);
+        }
+
+        .tags{
+            display: flex;
+            column-gap: 16px;
+            flex-wrap: wrap;
+            row-gap: 16px;
+
+            .tag{
+                padding: 8px 22px;
+                width: fit-content;
+                height: fit-content;
+                border: 1px solid var(--title-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 500;
+                color: var(--title-color);
+                border-radius: 12px;
+            }
+
+            .active-tag{
+                color: var(--card-bg);
+                border: unset;
+                background: var(--btn-bg-color);
+            }
+        }
+    }
+
+    .projects{
+        display: flex;
+        column-gap: 30px;
+
+        .project{
+            width: calc(33.33% - 20px);
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+
+            &__image-wrapper{
+                position: relative;
+                padding-top: calc(274 / 322 * 100%);
+
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                }
+            }
+
+            &__contents{
+                .technologies{
+                    display: flex;
+                    column-gap: 10px;
+                    row-gap: 10px;
+                    flex-wrap: wrap;
+
+                    span{
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        color: var(--title-color);
+                    }
+                }
+
+                .title{
+                    margin-top: 22px;
+                    margin-bottom: 18px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: var(--primary-text-color);
+                    font-weight: 500px;
+                }
+
+                .description{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: var(--sub-title-color);
+                    font-weight: 500;
+                    text-align: justify;
+                    margin-top: 0;
+                    margin-bottom: 40px;
+                }
+
+                .links{
+                    display: flex;
+                    column-gap: 12px;
+
+                    a{
+                        width: 135px;
+                        height: 46px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: 'Montserrat',sans-serif;
+                        font-size: 18px;
+                        line-height: 22px;
+                        font-weight: 500;
+                        outline: unset;
+                        border-radius: 12px;
+                    }
+
+                    .website{
+                        background: var(--btn-bg-color);
+                        border: unset;
+                        color: var(--card-bg);
+                    }
+
+                    .code{
+                        background: var(--card-bg);
+                        border: unset;
+                        color: var(--btn-bg-color);
+                        border: 1px solid var(--btn-bg-color);
+                    }
                 }
             }
         }
