@@ -8,6 +8,8 @@ import SKillList from "../common/SkillList";
 import Hobbies from "../common/Hobbies";
 import Experiences from "../common/Experiences";
 import { experienceDataList } from "../../data/experience-data";
+import BlogsList from "../common/blogs";
+import { blogs } from "../../data/blogs-data";
 
 const ExtendedLayout: React.FC = () => {
   return (
@@ -25,6 +27,7 @@ const ExtendedLayout: React.FC = () => {
             <SKillList title={skillSet.title} data={skillSet.list} />
             <SKillList title={toolsSet.title} data={toolsSet.list} />
           </div>
+          <BlogsList title={"Blogs"} data={blogs} />
         </div>
       </div>
 

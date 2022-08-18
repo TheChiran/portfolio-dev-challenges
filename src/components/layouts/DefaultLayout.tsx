@@ -7,6 +7,8 @@ import SKillList from "../common/SkillList";
 import Hobbies from "../common/Hobbies";
 import Experiences from "../common/Experiences";
 import { experienceDataList } from "../../data/experience-data";
+import BlogsList from "../common/blogs";
+import { blogs } from "../../data/blogs-data";
 
 const DefaultLayout: React.FC = () => {
   return (
@@ -26,6 +28,7 @@ const DefaultLayout: React.FC = () => {
         </div>
         <div className="col-2">
           <Experiences title={"Experiences"} data={experienceDataList} />
+          <BlogsList title={"Blogs"} data={blogs} />
         </div>
       </div>
       <footer>
