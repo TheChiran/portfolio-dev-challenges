@@ -1,11 +1,15 @@
 :root{
+    --bg-color: #F2F2F2;
     --primary-text-color: #333333;
-    --primary-text-color-gray: #BDBDBD;
-    --total-seat-color: #4F4F4F;
+    --title-color: #4F4F4F;
+    --secondary-title-color: #000000;
+    --sub-title-color: #828282;
+    --secondary-sub-title-color: #E0E0E0;
+    --btn-text-color: #FFFFFF;
+    --btn-bg-color: #2F80ED;
+    
 }
 
 $montserrat: 'Montserrat', sans-serif;
 $bg-color: #181719;
 $text-color: var(--primary-text-color);
-$gray-text-color: var(--primary-text-color-gray);
-$total-seat-color: var(--total-seat-color);
