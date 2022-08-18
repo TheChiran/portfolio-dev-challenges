@@ -1,36 +1,28 @@
-import * as React from 'react';
-import { ThemeContext } from '../../hooks/ThemeContext';
+import * as React from "react";
+import { ThemeContext } from "../../hooks/ThemeContext";
+import ThemeSetting from "../common/ThemeSetting";
+import Layout from "../layouts/Layout";
 import "./../../assets/styles/style.scss";
 
 const App: React.FC = () => {
-    const theme = React.useContext(ThemeContext);
-    const changeTheme = ()=>{
-      document.documentElement.style.setProperty('--bg-color','#2f3237');
-    }
+  const [layout, setLayout] = React.useState("default");
 
-    if(theme.layout === 'default'){
-      return (
-        <div className='container'>
-        <button onClick={changeTheme}>Change theme</button>
-        <footer>
-          <p>Created by <a href="https://chirantonmoy.vercel.app/">chiranSWE</a> - devChallenges.io</p>
-        </footer>
-        </div>
-      );
-    }
-    
-    if(theme.layout === 'extended'){
-      return (
-        <div className='container'>
-        
-        <footer>
-          <p>Created by <a href="https://chirantonmoy.vercel.app/">chiranSWE</a> - devChallenges.io</p>
-        </footer>
-        </div>
-      );
-    }
+  const changeTheme = () => {
+    document.documentElement.style.setProperty("--bg-color", "#2f3237");
+  };
 
-    return null;
+  const changeLayout = (updatedLayout) => {
+    setLayout(updatedLayout);
+  };
+
+  return (
+    <ThemeContext.Provider value={{ layout: layout, setLayout: changeLayout }}>
+      <div className="container">
+        <Layout />
+        <ThemeSetting />
+      </div>
+    </ThemeContext.Provider>
+  );
 };
 
-export default App;  
+export default App;

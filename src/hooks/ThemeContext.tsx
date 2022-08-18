@@ -8,7 +8,8 @@ import { createContext } from "react";
  * ]
  */
 const defaultContextValues = {
-    layout: 'default'
+    layout: 'default',
+    setLayout: (updatedLayout)=> {}
 };
   
 export const ThemeContext = createContext(defaultContextValues);

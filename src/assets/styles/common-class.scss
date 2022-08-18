@@ -1,9 +1,134 @@
 .container{
-    max-width: calc(100% - 480px);
+    max-width: calc(100% - 400px);
     width: 100%;
     margin: 0 auto;
 }
 
+.container-fluid{
+    max-width: calc(100% - 130px);
+    width: 100%;
+    margin:  0 auto;
+}
+
 .d-flex{
     display: flex;
+}
+
+// Person Card
+.person_card{
+    display: flex;
+    column-gap: 34px;
+    padding: 22px 25px;
+    background: #FFFFFF;
+    border-radius: 12px;  
+    width: 100%; 
+
+    &__image-wrapper{
+        position: relative;
+        width: 272px;
+        height: 266px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    }
+
+    &__contents{
+        width: calc(100% - 272px - 34px);
+        display: flex;
+        flex-direction: column;
+        row-gap: 38px;
+
+        &__detail{
+            display: flex;
+            justify-content: space-between;
+
+            .person-info{
+                .name{
+                    font-family: 'Montserrat',sans-serif;
+                    color: var(--title-color);
+                    font-weight: 600;
+                    font-size: 24px;
+                }
+
+                .profession{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 18px;
+                    line-height: 22px;
+                    font-weight: 500;
+                    color: var(--sub-title-color);
+                }
+            }
+
+            .person-contact{
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                .email,.phone{
+                    display: flex;
+                    column-gap: 18px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: var(--title-color);
+                    align-items: center;
+                    font-weight: 500;
+
+                    img{
+                        width: 18px;
+                    }
+                }
+            }
+        }
+
+        &__person-overview{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--sub-title-color);
+            line-height: 22px;
+            margin: 0;
+
+            
+        }
+    }
+} 
+
+.card{
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    height: fit-content;
+}
+
+.skill-list{
+    .skills{
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+
+        &__title{
+            font-family: 'Montserrat',sans-serif;
+            text-transform: uppercase;
+            margin: 0;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: var(--title-color);
+        }
+
+        &__data{
+            .rs-tag{
+                background-color: var(--btn-bg-color) !important;
+                color: var(--bg-color) !important;
+            }
+        }
+    }
 }

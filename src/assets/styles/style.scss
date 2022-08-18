@@ -3,6 +3,8 @@
 @import "responsive/responsive.scss";
 @import "fonts.scss";
 @import "rsuite/dist/rsuite.css";
+@import "./layouts/default.scss";
+@import "./layouts/extended.scss";
 
 body {
     margin: 0;
@@ -11,9 +13,68 @@ body {
     background: var(--bg-color);
 }
 
-/*Layout 1 */
+/* Settings*/
+.theme-settings{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background: unset;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
 
-/*Layout 2 */
+    img{
+        width: 30px;
+    }
+
+    &__setting{
+        position: absolute;
+        width: 250px;
+        right: -250px;
+        background: #FFF;
+        height: 200px;
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        align-items: center;
+        transition: 0.5s;
+
+        .title{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            color: var(--title-color);
+        }
+
+        &__layouts,&__themes{
+            display: flex;
+            column-gap: 10px;
+
+            .layout,.theme{
+                display: flex;
+                column-gap: 4px;
+                align-items: center;
+
+                label{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: var(--sub-title-color);
+                    font-weight: 300;
+                }
+            }
+        }
+        
+    }
+}
+
+.open-theme-settings{
+    right: 250px;
+}
 /* footer section */
 footer{
     width: 100%;
