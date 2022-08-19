@@ -10,38 +10,50 @@ import BlogsList from "../common/blogs";
 import { blogs } from "../../data/blogs-data";
 import Projects from "../common/Projects";
 import { ProjectList } from "../../data/project-list";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ExtendedLayout: React.FC = () => {
   return (
     <div className="extended_layout">
-      <div className="columns">
-        <div className="column1">
-          <PersonCard />
-          <Experiences title={"Experiences"} data={experienceDataList} />
-          <div className="hobby-list">
-            <Hobbies title="Hobbies" data={hobbyList} />
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          key={"empty"}
+          initial={{ x: -10, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -10, opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="columns">
+            <div className="column1">
+              <PersonCard />
+              <Experiences title={"Experiences"} data={experienceDataList} />
+              <div className="hobby-list">
+                <Hobbies title="Hobbies" data={hobbyList} />
+              </div>
+            </div>
+            <div className="column2">
+              <div className="skill-list">
+                <SKillList title={skillSet.title} data={skillSet.list} />
+                <SKillList title={toolsSet.title} data={toolsSet.list} />
+              </div>
+              <Projects
+                title={"Projects"}
+                tags={["HTML", "React", "CSS", "SCSS", "Responsive"]}
+                data={ProjectList}
+              />
+              <BlogsList title={"Blogs"} data={blogs} />
+            </div>
           </div>
-        </div>
-        <div className="column2">
-          <div className="skill-list">
-            <SKillList title={skillSet.title} data={skillSet.list} />
-            <SKillList title={toolsSet.title} data={toolsSet.list} />
-          </div>
-          <Projects
-            title={"Projects"}
-            tags={["HTML", "React", "CSS", "SCSS", "Responsive"]}
-            data={ProjectList}
-          />
-          <BlogsList title={"Blogs"} data={blogs} />
-        </div>
-      </div>
 
-      <footer>
-        <p>
-          Created by <a href="https://chirantonmoy.vercel.app/">chiranSWE</a> -
-          devChallenges.io
-        </p>
-      </footer>
+          <footer>
+            <p>
+              Created by{" "}
+              <a href="https://chirantonmoy.vercel.app/">chiranSWE</a> -
+              devChallenges.io
+            </p>
+          </footer>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };

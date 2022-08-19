@@ -25,9 +25,10 @@ const Projects: React.FC<IProjects> = ({ title, data, tags }: IProjects) => {
       </div>
 
       <div className="projects">
-        {data.map((project) => {
+        {data.map((project, index) => {
           return (
             <Project
+              key={`${project.title}-${index}`}
               imgUrl={project.imgUrl}
               technologies={project.technologies}
               title={project.title}

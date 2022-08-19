@@ -6,9 +6,19 @@ import "./../../assets/styles/style.scss";
 
 const App: React.FC = () => {
   const [layout, setLayout] = React.useState("default");
+  const [theme, setTheme] = React.useState("default");
 
   const changeTheme = () => {
-    document.documentElement.style.setProperty("--bg-color", "#2f3237");
+    const body: HTMLElement = document.querySelector("body")!;
+
+    if (theme === "default") {
+      body.classList.add("dark-theme");
+      setTheme("dark");
+    }
+    if (theme === "dark") {
+      body.classList.remove("dark-theme");
+      setTheme("default");
+    }
   };
 
   const changeLayout = (updatedLayout) => {
@@ -16,7 +26,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <ThemeContext.Provider value={{ layout: layout, setLayout: changeLayout }}>
+    <ThemeContext.Provider
+      value={{ layout: layout, setLayout: changeLayout, theme, changeTheme }}
+    >
       <div className="container mt-70">
         <Layout />
         <ThemeSetting />

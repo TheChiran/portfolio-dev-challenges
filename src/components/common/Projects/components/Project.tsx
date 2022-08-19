@@ -16,8 +16,10 @@ const Project: React.FC<ProjectData> = ({
       </div>
       <div className="project__contents">
         <div className="technologies">
-          {technologies.map((technology) => {
-            return <span>{`#${technology}`}</span>;
+          {technologies.map((technology, index) => {
+            return (
+              <span key={`${technology}-${index}`}>{`#${technology}`}</span>
+            );
           })}
         </div>
         <h2 className="title">{title}</h2>

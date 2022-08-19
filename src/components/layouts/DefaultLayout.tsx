@@ -11,6 +11,7 @@ import BlogsList from "../common/blogs";
 import { blogs } from "../../data/blogs-data";
 import Projects from "../common/Projects";
 import { ProjectList } from "../../data/project-list";
+import { motion, AnimatePresence } from "framer-motion";
 
 const DefaultLayout: React.FC = () => {
   return (

@@ -8,8 +8,10 @@ import { createContext } from "react";
  * ]
  */
 const defaultContextValues = {
-    layout: 'default',
-    setLayout: (updatedLayout)=> {}
+  layout: "default",
+  setLayout: (updatedLayout) => {},
+  theme: "default",
+  changeTheme: () => {},
 };
-  
+
 export const ThemeContext = createContext(defaultContextValues);

@@ -5,6 +5,7 @@
 @import "rsuite/dist/rsuite.css";
 @import "./layouts/default.scss";
 @import "./layouts/extended.scss";
+@import "./dark-theme.scss";
 
 body {
     margin: 0;
@@ -23,6 +24,11 @@ body {
     align-items: center;
     transition: 0.5s;
     cursor: pointer;
+    background: #252836;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    justify-content: center;
 
     img{
         width: 30px;
@@ -32,7 +38,7 @@ body {
         position: absolute;
         width: 250px;
         right: -250px;
-        background: #FFF;
+        background: #1F1D2B;
         height: fit-content;
         border-radius: 12px;
         padding: 20px;
@@ -47,7 +53,7 @@ body {
             font-size: 18px;
             font-weight: 700;
             line-height: 22px;
-            color: var(--title-color);
+            color: #FFFFFF;
         }
 
         &__layouts,&__themes{
@@ -63,7 +69,7 @@ body {
                     font-family: 'Montserrat', sans-serif;
                     font-size: 14px;
                     line-height: 22px;
-                    color: var(--sub-title-color);
+                    color: #ABBBC2;
                     font-weight: 300;
                 }
             }

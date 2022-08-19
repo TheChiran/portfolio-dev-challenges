@@ -1,6 +1,7 @@
 import * as React from "react";
 import settingsIcon from "../../assets/images/icons/settings.svg";
 import { ThemeContext } from "../../hooks/ThemeContext";
+import { Toggle } from "rsuite";
 
 const ThemeSetting: React.FC = () => {
   const theme = React.useContext(ThemeContext);
@@ -59,21 +60,10 @@ const ThemeSetting: React.FC = () => {
         </div>
         <div className="theme-settings__setting__themes">
           <div className="theme">
-            <label htmlFor="Default">Default</label>
-            <input
-              type="radio"
-              name="layout"
-              value={"default"}
-              //   checked={theme.layout === "default" && true}
-            />
-          </div>
-          <div className="theme">
-            <label htmlFor="Dark">Dark</label>
-            <input
-              type="radio"
-              name="layout"
-              value={"dark"}
-              //   checked={theme.layout === "extended" && true}
+            <label htmlFor="Theme">Theme: {theme.theme}</label>
+            <Toggle
+              checked={theme.theme === "dark" && true}
+              onClick={theme.changeTheme}
             />
           </div>
         </div>

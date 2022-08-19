@@ -29,3 +29,9 @@ const BlogsList: React.FC<Blogs> = ({ title, data }: Blogs) => {
 };
 
 export default BlogsList;
+function useEffect(
+  arg0: () => void,
+  arg1: (boolean | import("framer-motion").AnimationControls)[]
+) {
+  throw new Error("Function not implemented.");
+}
