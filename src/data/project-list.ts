@@ -14,7 +14,7 @@ export const ProjectList = [
         description: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ',
         website: '#',
         github: '#',
-        technologies: ['HTML','CSS', 'responsive'],
+        technologies: ['HTML','CSS', 'Responsive'],
         imgUrl: 'https://placehold.jp/322x274.png'
     },
     {
@@ -23,7 +23,7 @@ export const ProjectList = [
         description: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ',
         website: '#',
         github: '#',
-        technologies: ['HTML','CSS', 'responsive'],
+        technologies: ['HTML','CSS', 'Responsive'],
         imgUrl: 'https://placehold.jp/322x274.png'
     },
     {
@@ -32,7 +32,7 @@ export const ProjectList = [
         description: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ',
         website: '#',
         github: '#',
-        technologies: ['HTML','CSS', 'responsive', 'reactjs', 'framer-motion'],
+        technologies: ['HTML','CSS', 'SCSS','Responsive', 'React Js', 'Framer motion'],
         imgUrl: 'https://placehold.jp/322x274.png'
     }
 ]

@@ -6,7 +6,23 @@ import { motion } from "framer-motion";
 const Projects: React.FC<IProjects> = ({ title, data, tags }: IProjects) => {
   const [projectList, setProjectList] = useState(data);
   const [activeTag, setActiveTag] = useState("all");
+  const [updatedProject, setUpdatedProject] = useState(projectList);
+
+  const filterProject = (tag) => {
+    if (tag === "all") {
+      setUpdatedProject(projectList);
+      return;
+    }
+
+    let filteredProject = projectList.filter((element) => {
+      return element.technologies.includes(tag);
+    });
+    console.log("filtered project", filteredProject);
+    setUpdatedProject(filteredProject);
+  };
+
   const onActiveTagChange = (newTag) => {
+    filterProject(newTag);
     setActiveTag(newTag);
   };
 
@@ -21,14 +37,18 @@ const Projects: React.FC<IProjects> = ({ title, data, tags }: IProjects) => {
           {title}({data.length})
         </h2>
         <div className="tags">
-          <span className={`tag ${activeTag === "all" && "active-tag"}`}>
+          <span
+            onClick={() => onActiveTagChange("all")}
+            className={`tag ${activeTag === "all" && "active-tag"}`}
+          >
             All
           </span>
           {tags.map((tag, index) => {
             return (
               <span
+                onClick={() => onActiveTagChange(tag)}
                 key={`${title}-${tag}-${index}`}
-                className={`tag ${activeTag === "tag" && "active-tag"}`}
+                className={`tag ${activeTag === tag && "active-tag"}`}
               >
                 {tag}
               </span>
@@ -38,7 +58,7 @@ const Projects: React.FC<IProjects> = ({ title, data, tags }: IProjects) => {
       </div>
 
       <div className="projects">
-        {projectList.map((project, index) => {
+        {updatedProject.map((project, index) => {
           return (
             <motion.div
               whileInView={{

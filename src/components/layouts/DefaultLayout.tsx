@@ -11,7 +11,6 @@ import BlogsList from "../common/blogs";
 import { blogs } from "../../data/blogs-data";
 import Projects from "../common/Projects";
 import { ProjectList } from "../../data/project-list";
-import { motion, AnimatePresence } from "framer-motion";
 import { personDetail } from "../../data/person-data";
 
 const DefaultLayout: React.FC = () => {
@@ -52,7 +51,14 @@ const DefaultLayout: React.FC = () => {
       </div>
       <Projects
         title={"Projects"}
-        tags={["HTML", "React", "CSS", "SCSS", "Responsive"]}
+        tags={[
+          "HTML",
+          "React Js",
+          "CSS",
+          "SCSS",
+          "Responsive",
+          "Framer motion",
+        ]}
         data={ProjectList}
       />
       <footer>
