@@ -1,10 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Blog from "./components/Blog";
 import { Blogs } from "./interface/IBlogs";
 
 const BlogsList: React.FC<Blogs> = ({ title, data }: Blogs) => {
   return (
-    <div className="blogs">
+    <motion.div
+      whileInView={{ x: 0, opacity: 1, transition: { duration: 0.8 } }}
+      initial={{ x: 10, opacity: 0 }}
+      className="blogs"
+    >
       <div className="header card">
         <h2 className="header__title">
           {title}({data.length})
@@ -13,25 +18,29 @@ const BlogsList: React.FC<Blogs> = ({ title, data }: Blogs) => {
       <div className="blogs__list">
         {data.map((blog, index) => {
           return (
-            <Blog
+            <motion.div
               key={`${blog.title}-${index}`}
-              title={blog.title}
-              description={blog.description}
-              url={blog.url}
-              imgUrl={blog.imgUrl}
-              urlName={blog.urlName}
-            />
+              whileInView={{
+                y: 0,
+                x: 0,
+                opacity: 1,
+                transition: { duration: Number(index + 0.9) },
+              }}
+              initial={{ x: -10, opacity: 0 }}
+            >
+              <Blog
+                title={blog.title}
+                description={blog.description}
+                url={blog.url}
+                imgUrl={blog.imgUrl}
+                urlName={blog.urlName}
+              />
+            </motion.div>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default BlogsList;
-function useEffect(
-  arg0: () => void,
-  arg1: (boolean | import("framer-motion").AnimationControls)[]
-) {
-  throw new Error("Function not implemented.");
-}

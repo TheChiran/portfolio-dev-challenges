@@ -25,5 +25,14 @@ export const ProjectList = [
         github: '#',
         technologies: ['HTML','CSS', 'responsive'],
         imgUrl: 'https://placehold.jp/322x274.png'
+    },
+    {
+        id: 4,
+        title: 'Wind bnb',
+        description: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ',
+        website: '#',
+        github: '#',
+        technologies: ['HTML','CSS', 'responsive', 'reactjs', 'framer-motion'],
+        imgUrl: 'https://placehold.jp/322x274.png'
     }
 ]

@@ -12,6 +12,10 @@ const skillSet = {
     "TypeScript",
     "React-Redux",
     "Framer-motion",
+    "Nest Js",
+    "MongoDb",
+    "Express Js",
+    "REST API",
   ],
 };
 

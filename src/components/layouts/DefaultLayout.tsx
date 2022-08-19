@@ -12,12 +12,28 @@ import { blogs } from "../../data/blogs-data";
 import Projects from "../common/Projects";
 import { ProjectList } from "../../data/project-list";
 import { motion, AnimatePresence } from "framer-motion";
+import { personDetail } from "../../data/person-data";
 
 const DefaultLayout: React.FC = () => {
   return (
     <div className="default_layout">
       <div className="row">
-        <PersonCard />
+        <PersonCard
+          name={personDetail.name}
+          profession={personDetail.profession}
+          email={personDetail.email}
+          phone={personDetail.phone}
+          summary={personDetail.summary}
+          imgUrl={personDetail.imgUrl}
+          linkedIn={{
+            name: personDetail.linkedIn.name,
+            url: personDetail.linkedIn.url,
+          }}
+          github={{
+            name: personDetail.github.name,
+            url: personDetail.github.url,
+          }}
+        />
       </div>
       <div className="row">
         <div className="col-1">

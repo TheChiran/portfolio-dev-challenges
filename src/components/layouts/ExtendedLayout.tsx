@@ -11,6 +11,7 @@ import { blogs } from "../../data/blogs-data";
 import Projects from "../common/Projects";
 import { ProjectList } from "../../data/project-list";
 import { motion, AnimatePresence } from "framer-motion";
+import { personDetail } from "../../data/person-data";
 
 const ExtendedLayout: React.FC = () => {
   return (
@@ -25,7 +26,22 @@ const ExtendedLayout: React.FC = () => {
         >
           <div className="columns">
             <div className="column1">
-              <PersonCard />
+              <PersonCard
+                name={personDetail.name}
+                profession={personDetail.profession}
+                email={personDetail.email}
+                phone={personDetail.phone}
+                summary={personDetail.summary}
+                imgUrl={personDetail.imgUrl}
+                linkedIn={{
+                  name: personDetail.linkedIn.name,
+                  url: personDetail.linkedIn.url,
+                }}
+                github={{
+                  name: personDetail.github.name,
+                  url: personDetail.github.url,
+                }}
+              />
               <Experiences title={"Experiences"} data={experienceDataList} />
               <div className="hobby-list">
                 <Hobbies title="Hobbies" data={hobbyList} />

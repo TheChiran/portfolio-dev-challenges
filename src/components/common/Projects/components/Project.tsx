@@ -10,7 +10,7 @@ const Project: React.FC<ProjectData> = ({
   github,
 }: ProjectData) => {
   return (
-    <div className="project card">
+    <>
       <div className="project__image-wrapper">
         <img src={imgUrl} alt={title} />
       </div>
@@ -28,12 +28,12 @@ const Project: React.FC<ProjectData> = ({
           <a href={website} className="website">
             Demo
           </a>
-          <a href={website} className="code">
+          <a href={github} className="code">
             Code
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,10 +1,11 @@
 export type HobbyData = {
-    title: string,
-    subTitle: string,
-    imgUrl: string
+    index: number;
+    title: string;
+    subTitle: string;
+    imgUrl: string;
 };
 
 export interface IHobby{
-    title: string,
-    data: HobbyData []
+    title: string;
+    data: HobbyData [];
 }

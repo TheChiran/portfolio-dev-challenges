@@ -1,11 +1,11 @@
 export type ExperienceData = {
-    duration: string,
-    designation: string,
-    logoUrl: string,
-    description: string
+    duration: string;
+    designation: string;
+    logoUrl: string;
+    description: string;
 };
 
 export interface IExperiences{
-    title: string,
-    data: ExperienceData []
+    title: string;
+    data: ExperienceData [];
 }
