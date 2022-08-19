@@ -18,13 +18,14 @@
 
 @media(max-width: 1440px){
     .container{
-        max-width: 1200px;
+        max-width: calc(100% - 200px);
     }
 }
 
 @media(max-width: 1280px){
     .container{
-        max-width: 1040px;
+        max-width: calc(100% - 100px);
+        margin-top: 35px;
     }
 }
 

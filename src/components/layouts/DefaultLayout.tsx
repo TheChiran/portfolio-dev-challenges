@@ -49,18 +49,20 @@ const DefaultLayout: React.FC = () => {
           <BlogsList title={"Blogs"} data={blogs} />
         </div>
       </div>
-      <Projects
-        title={"Projects"}
-        tags={[
-          "HTML",
-          "React Js",
-          "CSS",
-          "SCSS",
-          "Responsive",
-          "Framer motion",
-        ]}
-        data={ProjectList}
-      />
+      <div className="row">
+        <Projects
+          title={"Projects"}
+          tags={[
+            "HTML",
+            "React Js",
+            "CSS",
+            "SCSS",
+            "Responsive",
+            "Framer motion",
+          ]}
+          data={ProjectList}
+        />
+      </div>
       <footer>
         <p>
           Created by <a href="https://chirantonmoy.vercel.app/">chiranSWE</a> -
