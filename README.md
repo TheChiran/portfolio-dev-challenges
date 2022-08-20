@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Wind bnb UI</h1>
+<h1 align="center">Tonmoy Chiran Portfolio</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="https://devchallenges.io/" target="_blank">Devchallenges.io</a>.
@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://windbnb-dev-challenges.vercel.app/">
+    <a href="https://portfolio-dev-challenges.vercel.app/">
       Demo
     </a>
     <span> | </span>
@@ -16,7 +16,7 @@
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD">
+    <a href="https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt">
       Challenge
     </a>
   </h3>
@@ -35,11 +35,24 @@
 <!-- OVERVIEW -->
 
 ## Overview
+### This challenge was very special one for me, I thought of why not make it my own portfolio. So, I did  my best to make it look great. To make it interactive I added some extra features including
 
+- Layout change
+- Theme change (light / dark)
+
+To make it happen, I used some useful libraries which must be mentioned
+
+- Framer motion (For animation)
+- React typed (For animated writing like name)
+- rsuitejs 
+
+I have named it as version 1, as I am planning on making some more features to add.
 #
 
-### Desktop View
-<img src="./src/assets/images/project-views/desktop-view.png"/>
+<!-- ### Default layout
+
+#### Light version (Desktop view)
+<img src="./src/assets/images/project-views/default_layout_light.gif"/>
 
 <img src="./src/assets/images/project-views/desktop-view-menu.png"/>
 
@@ -51,7 +64,7 @@
 
 <img src="./src/assets/images/project-views/mobile-menu-guests.png"/>
 
-<img src="./src/assets/images/project-views/mobile-menu-location.png"/>
+<img src="./src/assets/images/project-views/mobile-menu-location.png"/> -->
 
 ### Built With
 
@@ -64,6 +77,8 @@
 - [Type Script](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 - [rsuitejs](https://rsuitejs.com/guide/introduction/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [react-typed](http://ssbeefeater.github.io/react-typed)
 
 ## Features
 
@@ -73,7 +88,9 @@
 - Mobile First
 - Component Based
 - UI Design
-- Drawer
+- Animated component
+- Theme based (light / dark)
+- Multiple Layout 
 
 ## Acknowledgements
 
