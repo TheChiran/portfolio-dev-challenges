@@ -26,6 +26,17 @@
                     @media(max-width: 1024px){
                         height: 240px;
                     }
+
+                    @media(max-width: 769px){
+                        position: unset;
+                        display: flex;
+                        justify-content: center;
+                        img{
+                            position: unset;
+                            width: 240px;
+                            height: 100%;
+                        }
+                    }
                 }
         
                 &__contents{
@@ -40,6 +51,10 @@
                         text-align: justify;
                     }
                 }
+            }
+
+            @media(max-width: 769px){
+                grid-column: 1 / -1;
             }
         }
 
@@ -112,11 +127,68 @@
             @media(max-width: 992px){
                 row-gap: 24px;
             }
+
+            @media(max-width: 769px){
+                grid-column: 1 / -1;
+            }
+
+            @media(max-width: 651px){
+                .project-list{
+                    &__header{
+                        .tags{
+                            row-gap: 8px;
+                        }
+                    }
+                    .projects{
+                        .project{
+                            flex-direction: column;
+                            row-gap: 12px;
+
+                            &__image-wrapper{
+                                width: 100%;
+                                height: 300px;
+                            }
+
+                            &__contents{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .blogs{
+                    &__list{
+                        .blog{
+                            flex-direction: column-reverse;
+                            row-gap: 16px;
+
+                            &__image-wrapper{
+                                width: 100%;
+                            }
+
+                            &__contents{
+                                width: 100%;
+                            }
+                        }
+                    }   
+                }
+            }
+
+            @media(max-width: 501px){
+                .skill-list{
+                    flex-direction: column;
+                    row-gap: 16px;
+                }
+            }
         }
 
         @media(max-width: 992px){
             grid-template-columns: repeat(12, calc(8.40% - 16px));
             column-gap: 16px;
+        }
+
+        @media(max-width: 769px){
+            row-gap: 16px;
         }
     }
 }
